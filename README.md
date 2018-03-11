@@ -4,6 +4,10 @@ Prérequis : avoir installé angular-cli-ghpages pour déployer facile sur githu
 `npm i -g angular-cli-ghpages`
 
 `ng build --prod --base-href PWAEssai`, puis `ngh`.
+
+Ce repo contient les sources obtenues après avoir suivi le tuto suivant :
+Partie 1 : https://medium.com/@nsmirnova/creating-pwa-with-angular-5-e36ea2378b5d
+Partie 2 : https://medium.com/@nsmirnova/creating-pwa-with-angular-5-part-2-progressifying-the-application-449e3a706129
 # PWCat
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
