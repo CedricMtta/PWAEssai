@@ -3,9 +3,10 @@
     <button 
       color="primary" 
       (click)="generateSrc()"
+      disabled="{{ button.disabled }}"
       mat-button 
       mat-raised-button>
-      Give me another cat
+      {{ button.text }}
     </button>
   </mat-card-actions>
   <img 
