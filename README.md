@@ -1,3 +1,9 @@
+# Deployer l'application
+
+Prérequis : avoir installé angular-cli-ghpages pour déployer facile sur github pages :
+`npm i -g angular-cli-ghpages`
+
+`ng build --prod --base-href PWAEssai`, puis `ngh`.
 # PWCat
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
