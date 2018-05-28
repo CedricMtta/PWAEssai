@@ -8,7 +8,7 @@ import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
 import { ImgCardComponent } from './img-card/img-card.component';
-
+import {PushNotificationsModule} from 'ng-push';
 
 @NgModule({
   declarations: [
@@ -20,6 +20,7 @@ import { ImgCardComponent } from './img-card/img-card.component';
     MatToolbarModule,
     MatCardModule,
     MatButtonModule,
+    PushNotificationsModule,
     environment.production ? ServiceWorkerModule.register('ngsw-worker.js') : []
   ],
   providers: [],

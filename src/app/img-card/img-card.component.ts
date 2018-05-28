@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { PushNotificationsService } from 'ng-push';
 @Component({
   selector: 'app-img-card',
   templateUrl: './img-card.component.html',
@@ -20,9 +20,12 @@ export class ImgCardComponent implements OnInit {
 
   public src: string;
 
-  constructor() { }
+  constructor(private pushNotification: PushNotificationsService) { }
 
   ngOnInit() {
+    //Demande de permission de notifications
+    this.pushNotification.requestPermission();
+
     this.generateSrc();
 
     if(!navigator.onLine) {
@@ -36,6 +39,14 @@ export class ImgCardComponent implements OnInit {
       this.image.message + 
       "?size=" + this.image.fontsize +
       "&ts=" + Date.now();
+  }
+
+  showPush():void {
+    this.pushNotification.create("Message push", {body:'Salut les M2'})
+    .subscribe(
+      res=>console.log(res), 
+      err => console.log(err)
+    );
   }
 }
 
