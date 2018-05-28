@@ -1,4 +1,7 @@
-<mat-toolbar color="primary">
-  {{ title }}
+<mat-toolbar>
+  <nav>
+    <a routerLink="/notification" routerLinkActive="active">Notification</a>
+    <a routerLink="/camera" routerLinkActive="active">Caméra</a>
+  </nav>
 </mat-toolbar>
-<app-img-card></app-img-card>
+<router-outlet></router-outlet>
