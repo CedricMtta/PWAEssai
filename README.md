@@ -8,6 +8,12 @@ Prérequis : avoir installé angular-cli-ghpages pour déployer facile sur githu
 Ce repo contient les sources obtenues après avoir suivi le tuto suivant :
 Partie 1 : https://medium.com/@nsmirnova/creating-pwa-with-angular-5-e36ea2378b5d
 Partie 2 : https://medium.com/@nsmirnova/creating-pwa-with-angular-5-part-2-progressifying-the-application-449e3a706129
+
+Pour tester en local : 
+`ng build --prod`
+`cd dist`
+`http-server`
+
 # PWCat
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
