@@ -1,11 +1,11 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
 import { PushNotificationsService } from 'ng-push';
 
 @Component({
   selector: 'app-img-card',
   templateUrl: './camera.component.html'
 })
-export class CameraComponent {
+export class CameraComponent implements OnInit {
   @ViewChild('videoElement') videoElement: any;  
   video: any;
 
