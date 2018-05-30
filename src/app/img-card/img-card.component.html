@@ -1,24 +1,28 @@
-<mat-card>
-  <mat-card-actions>
-    <button 
-      color="primary" 
-      (click)="generateSrc()"
-      disabled="{{ button.disabled }}"
-      mat-button 
-      mat-raised-button>
-      {{ button.text }}
-    </button>
-
-    <button
-      color="primary"
-      (click)="showPush()"
-      mat-button
-      mat-raised-button>
-      Push notif
-    </button>
-  </mat-card-actions>
-  <img 
-    src="{{ src }}" 
-    alt="Cute cat"
-    mat-card-image>
-</mat-card>
+<div class="row">
+  <div class="col-sm-8">
+      <mat-card>
+          <mat-card-actions>
+            <button 
+              color="primary" 
+              (click)="generateSrc()"
+              disabled="{{ button.disabled }}"
+              mat-button 
+              mat-raised-button>
+              {{ button.text }}
+            </button>
+        
+            <button
+              color="primary"
+              (click)="showPush()"
+              mat-button
+              mat-raised-button>
+              Push notif
+            </button>
+          </mat-card-actions>
+          <img 
+            src="{{ src }}" 
+            alt="Cute cat"
+            mat-card-image>
+        </mat-card>
+  </div>
+</div>

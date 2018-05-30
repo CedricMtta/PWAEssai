@@ -11,26 +11,40 @@ import { AppComponent } from './app.component';
 import { ImgCardComponent } from './img-card/img-card.component';
 import {PushNotificationsModule} from 'ng-push';
 import { CameraComponent } from './camera/camera.component.';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SignupComponent } from './auth/signup/signup.component';
+import { SigninComponent } from './auth/signin/signin.component';
+import { AuthService } from './services/auth.service';
 const appRoutes: Routes = [
+  { path: 'auth/signup', component: SignupComponent },
+  { path: 'auth/signin', component: SigninComponent },
   {path: 'notification', component: ImgCardComponent},
-  {path: 'camera', component: CameraComponent}
+  {path: 'camera', component: CameraComponent},
+  { path: '', redirectTo: 'camera', pathMatch: 'full' },
+  { path: '**', redirectTo: 'camera' }
 ]
 @NgModule({
   declarations: [
     AppComponent,
     ImgCardComponent,
-    CameraComponent
+    CameraComponent,
+    SignupComponent,
+    SigninComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     MatToolbarModule,
     MatCardModule,
     MatButtonModule,
     PushNotificationsModule,
     environment.production ? ServiceWorkerModule.register('ngsw-worker.js') : []
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
