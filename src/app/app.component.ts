@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import * as firebase from 'firebase';
 import { AuthService } from './services/auth.service';
 
+import { FcmPushService } from './services/fcm-push/fcm-push.service';
+import { FirebaseAuthService } from './services/firebase-auth/firebase-auth.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
