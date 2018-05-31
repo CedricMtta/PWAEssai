@@ -21,8 +21,8 @@ const appRoutes: Routes = [
   { path: 'auth/signin', component: SigninComponent },
   {path: 'notification', component: ImgCardComponent},
   {path: 'camera', component: CameraComponent},
-  { path: '', redirectTo: 'camera', pathMatch: 'full' },
-  { path: '**', redirectTo: 'camera' }
+  { path: '', component: ImgCardComponent },
+  { path: '**', component: ImgCardComponent }
 ]
 @NgModule({
   declarations: [
