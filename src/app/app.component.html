@@ -3,8 +3,11 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <ul class="nav navbar-nav">
-      <li routerLinkActive="active">
-        <a routerLink="books">Livres</a>
+      <li>
+        <a routerLink="/notification" routerLinkActive="active">Notification</a>
+      </li>
+      <li>
+        <a routerLink="/camera" routerLinkActive="active">Caméra</a>
       </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
@@ -16,12 +19,6 @@
       </li>
       <li>
         <a (click)="onSignOut()" style="cursor:pointer" *ngIf="isAuth">Déconnexion</a>
-      </li>
-      <li>
-        <a routerLink="/notification" routerLinkActive="active">Notification</a>
-      </li>
-      <li>
-        <a routerLink="/camera" routerLinkActive="active">Caméra</a>
       </li>
     </ul>
   </div>
